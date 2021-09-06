@@ -1,6 +1,6 @@
 CREATE SCHEMA netology;
 
-CREATE TABLE persons
+CREATE TABLE netology.persons
 (
     name           VARCHAR(255),
     surname        VARCHAR(255),
@@ -10,18 +10,8 @@ CREATE TABLE persons
     CONSTRAINT firstKeyP PRIMARY KEY (name, surname, age)
 );
 
-INSERT INTO persons
+INSERT INTO netology.persons
 VALUES ('Ben', 'Kenobi', 70, 66, 'Stewjon'),
        ('Vasya', 'Wasonkin', 18, 551477, 'Moscow');
-
-DROP TABLE persons;
-
-SELECT * FROM persons
-WHERE age > 27
-ORDER BY age DESC;
-
-SELECT name, surname
-FROM persons
-WHERE city_of_living = 'Moscow';
 
 
